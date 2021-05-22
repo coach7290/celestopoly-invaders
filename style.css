@@ -1,0 +1,102 @@
+.grid {
+	width: 900px;
+	height: 900px;
+	border: solid black 1px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.grid div {
+	width: 100px;
+	height: 100px;
+}
+
+.invader {
+	background: url(coffee.png);
+	background-size: contain;
+	border-radius: 10px;
+}
+
+.shooter {
+	background: url(ste1.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.laser {
+	background-color: orange;
+	
+	
+	
+}
+
+.fire{
+   max-width: 10px;
+   background-color: orange;
+   margin: auto;
+}
+
+
+.boom {
+	background-color: red;
+}
+
+.ste-l{
+	background: url(ste2.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.ste-xl{
+	background: url(ste3.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.container {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-arrow-left{
+	font-size: 100px;
+
+}
+
+.fa-arrow-right{
+	font-size: 100px;
+	
+}
+
+.fa-circle{
+	font-size: 100px;
+	
+}
+
+.controls {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 30px;
+}
+
+.controls-none {
+	display: none;
+}
+
+.video-container{
+	width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+	display: none;
+}
+
+.game-none{
+	display: none;
+}
+
+.video-flex{
+	display: flex;
+}
