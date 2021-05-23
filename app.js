@@ -160,7 +160,9 @@ document.getElementById("right-arrow").addEventListener("click", function(e) {
   }
 
 });
-document.getElementById("shoot-button").addEventListener("click", function(e) {
+
+const shootButtons = document.querySelectorAll("#shoot-button")
+shootButtons.forEach(item=>{item.addEventListener("click", function(e) {
   let laserId
   let currentLaserIndex = currentShooterIndex
   function moveLaser() {
@@ -208,14 +210,21 @@ document.getElementById("shoot-button").addEventListener("click", function(e) {
       aliensRemoved.push(alienRemoved)
       results++
       resultsDisplay.innerHTML = results
-      if(results===5){
+    setTimeout(()=>{if(results===5){
       document.querySelector(".controls").classList.add("controls-none")
       document.querySelector(".game-container").classList.add("game-none")
       document.querySelector(".video-container").classList.add("video-flex")
       const video = document.querySelector(".video")
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      } else if (video.webkitRequestFullscreen) { /* Safari */
+        video.webkitRequestFullscreen();
+      } else if (video.msRequestFullscreen) { /* IE11 */
+        video.msRequestFullscreen();
+      }
      
       
-      }
+      }},1000)
       
       console.log(aliensRemoved)
 
@@ -227,7 +236,7 @@ document.getElementById("shoot-button").addEventListener("click", function(e) {
   
 
 
-});
+})});
 
 function moveInvaders() {
   const leftEdge = alienInvaders[0] % width === 0
