@@ -213,7 +213,7 @@ document.getElementById("shoot-button").addEventListener("click", function(e) {
       document.querySelector(".game-container").classList.add("game-none")
       document.querySelector(".video-container").classList.add("video-flex")
       const video = document.querySelector(".video")
-      video.autoplay= true;
+     
       
       }
       
